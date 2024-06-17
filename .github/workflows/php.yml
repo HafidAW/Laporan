@@ -39,12 +39,3 @@ jobs:
 
     # - name: Run test suite
     #   run: composer run-script test
-    - name: Deploy to GitHub Pages
-      run: |
-        git config --global user.email "hafid.aw@students.amikom.ac.id"
-        git config --global user.name "hafid"
-        git checkout main
-        git add .
-        git commit -m "Deploy to GitHub Pages"
-        git push origin main
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
